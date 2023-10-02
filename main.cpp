@@ -5,8 +5,8 @@ Type Min(Type a, Type b) {
 	return static_cast<Type>(a < b ? a : b);
 }
 
-
-char Min(char a, char b) {
+template<>
+char Min<char>(char a, char b) {
 	printf("数字以外は代入できません");
 	return '\n';
 }
