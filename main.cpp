@@ -13,10 +13,10 @@ char Min<char>(char a, char b) {
 
 int main() {
 
-	printf("%d\n", Min(1, 5));
-	printf("%f\n", Min(1.0f, 2.0f));
-	printf("%lf\n", Min(1.0, 2.0));
-	printf("%c\n", Min('1', '5'));
+	printf("%d\n", Min<int>(1, 5));
+	printf("%f\n", Min<float>(1.0f, 2.0f));
+	printf("%lf\n", Min<double>(1.0, 2.0));
+	printf("%c\n", Min<char>('1', '5'));
 
 	return 0;
 }
