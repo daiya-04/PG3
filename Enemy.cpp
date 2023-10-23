@@ -1,4 +1,4 @@
-#include "Enemy.h"
+ï»¿#include "Enemy.h"
 #include <stdio.h>
 #include <Windows.h>
 #include <time.h>
@@ -20,21 +20,21 @@ void Enemy::Update() {
 
 void Enemy::ApproachUpdate() {
 
-	printf("Ú‹ß’†\n");
+	printf("æ¥è¿‘ä¸­\n");
 	phase_ = Phase::Attack;
 
 }
 
 void Enemy::AttackUpdate() {
 
-	printf("ËŒ‚’†\n");
+	printf("å°„æ’ƒä¸­\n");
 	phase_ = Phase::Leave;
 
 }
 
 void Enemy::LeaveUpdate() {
 
-	printf("—£’E’†\n");
+	printf("é›¢è„±ä¸­\n");
 	phase_ = Phase::Approach;
 
 }
