@@ -7,7 +7,6 @@ Type Min(Type a, Type b) {
 
 template<>
 char Min<char>(char a, char b) {
-	printf("数字以外は代入できません");
 	return '\n';
 }
 
@@ -16,7 +15,10 @@ int main() {
 	printf("%d\n", Min<int>(1, 5));
 	printf("%f\n", Min<float>(1.0f, 2.0f));
 	printf("%lf\n", Min<double>(1.0, 2.0));
-	printf("%c\n", Min<char>('1', '5'));
+	if (Min<char>('1', '5') == '\n') {
+		printf("数字以外は代入できません");
+	}
+	
 
 	return 0;
 }
