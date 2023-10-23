@@ -1,4 +1,4 @@
-#include "Weapon.h"
+﻿#include "Weapon.h"
 #include <stdio.h>
 
 Weapon::Weapon() {}

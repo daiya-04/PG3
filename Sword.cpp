@@ -1,20 +1,20 @@
-#include "Sword.h"
+ï»¿#include "Sword.h"
 #include <stdio.h>
 
 Sword::Sword() {
 
-	printf("Œ•‚ğ“üè‚µ‚½\n");
+	printf("å‰£ã‚’å…¥æ‰‹ã—ãŸ\n");
 
 }
 
 Sword::~Sword() {
 
-	printf("Œ•‚ª‰ó‚ê‚½\n");
+	printf("å‰£ãŒå£Šã‚ŒãŸ\n");
 
 }
 
 void Sword::Update() {
 
-	printf("Šâ‚ğØ‚Á‚½\n");
+	printf("å²©ã‚’åˆ‡ã£ãŸ\n");
 
 }

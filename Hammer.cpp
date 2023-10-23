@@ -1,20 +1,20 @@
-#include "Hammer.h"
+ï»¿#include "Hammer.h"
 #include <stdio.h>
 
 Hammer::Hammer() {
 
-	printf("ƒnƒ“ƒ}[‚ğ“üè‚µ‚½\n");
+	printf("ãƒãƒ³ãƒãƒ¼ã‚’å…¥æ‰‹ã—ãŸ\n");
 
 }
 
 Hammer::~Hammer() {
 
-	printf("ƒnƒ“ƒ}[‚ª‰ó‚ê‚½\n");
+	printf("ãƒãƒ³ãƒãƒ¼ãŒå£Šã‚ŒãŸ\n");
 
 }
 
 void Hammer::Update() {
 
-	printf("Šâ‚ğÓ‚¢‚½\n");
+	printf("å²©ã‚’ç •ã„ãŸ\n");
 
 }
