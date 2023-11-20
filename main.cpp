@@ -13,7 +13,12 @@ int main() {
 	srand(time(nullptr));
 	int selectNumber = 0;
 
-	std::function<void()> SelectRole = [&selectNumber]() {
+	std::function<void(int)> SetTimeout = [](int second) {
+		Sleep(1000 * second);
+	};
+
+	std::function<void()> SelectRole = [&selectNumber,SetTimeout]() {
+		SetTimeout(1);
 		while (true) {
 			if (selectNumber != 1 && selectNumber != 2) {
 				printf("サイコロの目が半(奇数)なら'1'を、丁(偶数)なら'2'を入力してください\n入力 : ");
@@ -26,7 +31,9 @@ int main() {
 		}
 	};
 
-	std::function<void()> ResultRole = [&selectNumber]() {
+	std::function<void()> ResultRole = [&selectNumber,SetTimeout]() {
+		SetTimeout(3);
+
 		int diceNum = rand() % 6 + 1;
 		printf("結果 : %d\n", diceNum);
 		if ((selectNumber == 1 && (diceNum % 2) == 1) || (selectNumber == 2 && (diceNum % 2) == 0)) {
@@ -37,15 +44,10 @@ int main() {
 		}
 	};
 
-	auto SetTimeout = [](std::function<void()> func, int second) {
-		Sleep(second * 1000);
-		func();
-	};
-
 	printf("サイコロを振った！\n");
-
-	SetTimeout(SelectRole,1);
-	SetTimeout(ResultRole, 3);
+	SelectRole();
+	ResultRole();
+	
 
 	return 0;
 }
